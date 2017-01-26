@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinStarter.MenuPage">
+  <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+  <StackLayout VerticalOptions="FillAndExpand" Orientation="Vertical" Spacing="25">
+    <ListView x:Name="listMenu" VerticalOptions="FillAndExpand" SeparatorVisibility="None"  RowHeight="40" ItemSelected="OnMenuItemSelection">
+
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ImageCell Text="{Binding Title}" ImageSource="{Binding IconSource}"/>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+
+
+    </ListView>
+  </StackLayout>
+</ContentPage>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinStarter"
+             x:Class="XamarinStarter.MainPage">
+
+  <ContentPage.Content>
+    <ScrollView>
+      <StackLayout Orientation="Vertical" Padding="25" Spacing="20">
+
+        <Label Text="Welcome to Appy - a demo app built with .NET and Azure."
+                 VerticalOptions="Center"
+                 HorizontalOptions="Center" Font="Medium" />
+
+        <Label Text="Before we get going, let's get you registered."
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center" Font="Medium" Margin="0,50,0,50" />
+
+
+        <Label x:Name="lblEmail" Text="Email" Font="Small" />
+        <Entry x:Name="txtEmail" />
+        <Button x:Name ="btnSignIn" Text="Sign In" Clicked="OnSignInButtonClicked" />
+
+        <Button x:Name ="btnSettings" Text="" View.HorizontalOptions="Start" View.VerticalOptions="CenterAndExpand">
+          <Button.Image >
+            <OnPlatform x:TypeArguments="FileImageSource"
+                  iOS="gear.png"
+                  Android="gear.png"
+                  WinPhone="Resources/gear.png"/>
+          </Button.Image>
+        </Button>
+      </StackLayout>
+
+    </ScrollView>
+  </ContentPage.Content>
+
+</ContentPage>
