@@ -12,7 +12,7 @@ namespace XamarinStarter
     {
         public MenuPage()
         {
-            Title = "Appy";
+            Title = "XamarinStarter";
 
             InitializeComponent();
 

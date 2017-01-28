@@ -10,27 +10,23 @@
 
       <ListView.ItemTemplate>
         <DataTemplate>
-          <ImageCell Text="{Binding Name}"  Detail="{Binding Description}" ImageSource="{Binding Image}">
-            <ImageCell.ContextActions>
+          <ViewCell>
+            <StackLayout BackgroundColor="#FFFFFF" Orientation="Vertical">
+              <StackLayout Orientation="Horizontal">
+                <Image Source="{Binding Image}" WidthRequest="40"/>
+                <StackLayout Orientation="Vertical">
+                  <Label Text="{Binding Name}" TextColor="#0a8908" FontSize="18" />
+                  <Label Text="{Binding Description}" HorizontalOptions="EndAndExpand" TextColor="#000000" FontSize="11" />
+                </StackLayout>
+              </StackLayout>
+            </StackLayout>
+            <ViewCell.ContextActions>
               <MenuItem Clicked="OnListViewItemMore" CommandParameter="{Binding Name}"
                  Text="More" />
               <MenuItem Clicked="OnListViewItemDelete" CommandParameter="{Binding Name}"
                  Text="Delete" IsDestructive="True" />
-            </ImageCell.ContextActions>
-          </ImageCell>
-          <!--<ViewCell>
-          <StackLayout BackgroundColor="#eee"
-          Orientation="Vertical">
-            <StackLayout Orientation="Horizontal">
-              <Image Source="{Binding image}" />
-              <Label Text="{Binding Name}"
-              TextColor="#f35e20" />
-              <Label Text="{Binding Description}"
-              HorizontalOptions="EndAndExpand"
-              TextColor="#503026" />
-            </StackLayout>
-          </StackLayout>
-        </ViewCell>-->
+            </ViewCell.ContextActions>
+          </ViewCell>
         </DataTemplate>
       </ListView.ItemTemplate>
     </ListView>

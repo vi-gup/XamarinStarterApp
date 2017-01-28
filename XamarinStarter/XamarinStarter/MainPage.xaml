@@ -8,7 +8,7 @@
     <ScrollView>
       <StackLayout Orientation="Vertical" Padding="25" Spacing="20">
 
-        <Label Text="Welcome to Appy - a demo app built with .NET and Azure."
+        <Label Text="Welcome to XamarinStarter - a demo app built with .NET and Azure."
                  VerticalOptions="Center"
                  HorizontalOptions="Center" Font="Medium" />
 
