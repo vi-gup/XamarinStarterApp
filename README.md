@@ -4,7 +4,7 @@ A Xamarin forms application, showcasing the capabilities of the platform. The pr
 Xamarin is a great platform for building cross-platform mobile apps, but still many developers hesitate to work on Xamarin, especially because there are different ways to develop mobile apps with Xamarin which somewhat confuses them. I want to help those developers by providing them a simple boilerplate code to get started.
 
 ## Project Requirements
-To successfully build and run this project following tools and technologies are required:
+To successfully build and run this project, following tools and technologies are required:
 
 * Visual Studio 2015 with Update 3
 * Xamarin version 4.2
