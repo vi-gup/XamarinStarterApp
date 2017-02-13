@@ -21,12 +21,14 @@ namespace XamarinStarter
             //MainPage = new NavigationPage(new XamarinStarter.MainPage());
 
             //For hamburger menu.
-            var menuPage = new MenuPage();
-            NavigationPage = new NavigationPage(new MainPage());
-            var rootPage = new RootPage();
-            rootPage.Master = menuPage;
-            rootPage.Detail = NavigationPage;
-            MainPage = rootPage;
+            //var menuPage = new MenuPage();
+            //NavigationPage = new NavigationPage(new MainPage());
+            //var rootPage = new RootPage();
+            //rootPage.Master = menuPage;
+            //rootPage.Detail = NavigationPage;
+            //MainPage = rootPage;
+
+            MainPage = new NavigationPage(new XamarinStarter.RootPage());
 
         }
 

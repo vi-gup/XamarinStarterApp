@@ -10,18 +10,19 @@ namespace XamarinStarter
 {
     public partial class MenuPage : ContentPage
     {
+        public ListView MenuListView { get { return listMenu; } }
+
         public MenuPage()
         {
-            Title = "XamarinStarter";
-
             InitializeComponent();
-
+            
             listMenu.ItemsSource = new List<HamburgerMenuItem>() {
                 new HamburgerMenuItem() { Title = "Home Page", IconSource = Device.OnPlatform(ImageSource.FromFile("star.png"), ImageSource.FromFile("star.png"), ImageSource.FromFile("Resources/star.png")), TargetType=typeof(MainPage) },
                 new HamburgerMenuItem() { Title = "Items List", IconSource = Device.OnPlatform(ImageSource.FromFile("star.png"), ImageSource.FromFile("star.png"), ImageSource.FromFile("Resources/star.png")), TargetType=typeof(ItemsList) }
             };
         }
 
+        /*
         void OnMenuItemSelection(object sender, SelectedItemChangedEventArgs e)
         {
             var item = e.SelectedItem as HamburgerMenuItem;
@@ -36,6 +37,7 @@ namespace XamarinStarter
                 //TODO: Hide menu after click.
             }
         }
+        */
     }
 
     public class HamburgerMenuItem

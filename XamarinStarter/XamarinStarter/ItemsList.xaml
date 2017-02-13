@@ -1,34 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="XamarinStarter.ItemsList">
+             x:Class="XamarinStarter.ItemsList" Title="Items List">
 
-  <StackLayout Orientation="Vertical" Padding="20,0,0,0" Spacing="20">
-    <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+  <ContentPage.Content>
+    <StackLayout Orientation="Vertical" Padding="20,0,0,0" Spacing="20">
+      <!--<Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />-->
 
-    <ListView  x:Name="listView" RowHeight="60" ItemSelected="OnListViewItemSelection" IsPullToRefreshEnabled="True">
+      <ListView  x:Name="listView" RowHeight="60" ItemSelected="OnListViewItemSelection" IsPullToRefreshEnabled="True">
 
-      <ListView.ItemTemplate>
-        <DataTemplate>
-          <ViewCell>
-            <StackLayout BackgroundColor="#FFFFFF" Orientation="Vertical">
-              <StackLayout Orientation="Horizontal">
-                <Image Source="{Binding Image}" WidthRequest="40"/>
-                <StackLayout Orientation="Vertical">
-                  <Label Text="{Binding Name}" TextColor="#0a8908" FontSize="18" />
-                  <Label Text="{Binding Description}" HorizontalOptions="EndAndExpand" TextColor="#000000" FontSize="11" />
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <StackLayout BackgroundColor="#FFFFFF" Orientation="Vertical">
+                <StackLayout Orientation="Horizontal">
+                  <Image Source="{Binding Image}" WidthRequest="40"/>
+                  <StackLayout Orientation="Vertical">
+                    <Label Text="{Binding Name}" TextColor="#0a8908" FontSize="18" />
+                    <Label Text="{Binding Description}" HorizontalOptions="EndAndExpand" TextColor="#000000" FontSize="11" />
+                  </StackLayout>
                 </StackLayout>
               </StackLayout>
-            </StackLayout>
-            <ViewCell.ContextActions>
-              <MenuItem Clicked="OnListViewItemMore" CommandParameter="{Binding Name}"
-                 Text="More" />
-              <MenuItem Clicked="OnListViewItemDelete" CommandParameter="{Binding Name}"
-                 Text="Delete" IsDestructive="True" />
-            </ViewCell.ContextActions>
-          </ViewCell>
-        </DataTemplate>
-      </ListView.ItemTemplate>
-    </ListView>
-  </StackLayout>
+              <ViewCell.ContextActions>
+                <MenuItem Clicked="OnListViewItemMore" CommandParameter="{Binding Name}"
+                   Text="More" />
+                <MenuItem Clicked="OnListViewItemDelete" CommandParameter="{Binding Name}"
+                   Text="Delete" IsDestructive="True" />
+              </ViewCell.ContextActions>
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+    </StackLayout>
+  </ContentPage.Content>
 </ContentPage>

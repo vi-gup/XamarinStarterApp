@@ -12,6 +12,7 @@ namespace XamarinStarter
         public MainPage()
         {
             InitializeComponent();
+            //Title = "Home";
         }
 
         protected override void OnAppearing()

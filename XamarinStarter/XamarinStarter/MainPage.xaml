@@ -16,10 +16,9 @@
                    VerticalOptions="Center"
                    HorizontalOptions="Center" Font="Medium" Margin="0,50,0,50" />
 
-
         <Label x:Name="lblEmail" Text="Email" Font="Small" />
-        <Entry x:Name="txtEmail" />
-        <Button x:Name ="btnSignIn" Text="Sign In" Clicked="OnSignInButtonClicked" />
+        <Entry x:Name="txtEmail" Placeholder="Email" />
+        <Button x:Name ="btnSignIn" Text="Sign In" Clicked="OnSignInButtonClicked" TextColor="White" BackgroundColor="#77D065"/>
 
         <Button x:Name ="btnSettings" Text="" View.HorizontalOptions="Start" View.VerticalOptions="CenterAndExpand">
           <Button.Image >

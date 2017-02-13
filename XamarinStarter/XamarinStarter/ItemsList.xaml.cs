@@ -12,7 +12,7 @@ namespace XamarinStarter
     {
         public ItemsList()
         {
-            Title = "Items List";
+            //Title = "Items List";
 
             InitializeComponent();
         }
